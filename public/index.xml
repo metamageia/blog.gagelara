@@ -9,10 +9,17 @@
     <lastBuildDate>Tue, 24 Jun 2025 15:16:15 -0500</lastBuildDate>
     <atom:link href="https://metamageia.github.io/blog.gagelara/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://metamageia.github.io/blog.gagelara/post/01---effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/</link>
+      <title>iindex</title>
+      <link>https://metamageia.github.io/blog.gagelara/post/01-of-the-index/</link>
       <pubDate>Tue, 24 Jun 2025 15:16:15 -0500</pubDate>
-      <guid>https://metamageia.github.io/blog.gagelara/post/01---effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/</guid>
+      <guid>https://metamageia.github.io/blog.gagelara/post/01-of-the-index/</guid>
+      <description>&lt;p&gt;Welcome! My name is Gage Lara aka Metamageia and this is the homepage &amp;amp; index of The Metamageia Blog, where I write at length about whatever&amp;rsquo;s been on my mind lately - NixOS, DevOPs, Cloud, etc.&lt;/p&gt;&#xA;&lt;p&gt;Want to get in touch? Reach out at &lt;code&gt;metamageia@gmail.com&lt;/code&gt; or connect with me on &lt;a href=&#34;https://github.com/metamageia&#34;&gt;GitHub&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://www.linkedin.com/in/gage-lara&#34;&gt;Linkedin&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you enjoy any of the posts here and want to read some of my messier, disorganized thoughts as I explore them check out &lt;a href=&#34;https://metamageia.github.io/The-Metamageia-Vault/&#34;&gt;The Metamageia Vault&lt;/a&gt;, my personal website where I publish my working notes about everything from tech to TTRPGs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://metamageia.github.io/blog.gagelara/post/effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/01---effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/</link>
+      <pubDate>Tue, 24 Jun 2025 15:16:15 -0500</pubDate>
+      <guid>https://metamageia.github.io/blog.gagelara/post/effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/01---effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/</guid>
       <description>&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;[[#Introduction]]&lt;/li&gt;&#xA;&lt;li&gt;[[#What is CI/CD?]]&lt;/li&gt;&#xA;&lt;li&gt;[[#Preparing your Obsidian Vault]]&lt;/li&gt;&#xA;&lt;li&gt;[[#Setting up the Quartz Static Site]]&lt;/li&gt;&#xA;&lt;li&gt;[[#Creating the CI/CD Workflow]]&#xA;&lt;ul&gt;&#xA;&lt;li&gt;[[#Quartz Deploy Workflow]]&lt;/li&gt;&#xA;&lt;li&gt;[[#Setting up a PAT &amp;amp; Secrets Management]]&lt;/li&gt;&#xA;&lt;li&gt;[[#Push Quartz Content Workflow]]&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;[[#Optional Maintaining Multiple Sites from within a Single Vault]]&lt;/li&gt;&#xA;&lt;li&gt;[[#Conclusion]]&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;For a few years now I&amp;rsquo;ve run my life in &lt;a href=&#34;https://obsidian.md/&#34;&gt;Obsidian&lt;/a&gt;. Everything - including research, project management, TTRPG notes, and this post you&amp;rsquo;re reading now - lives in my personal Obsidian vault. I recently refactored this &amp;ldquo;second brain&amp;rdquo; of mine and begin sharing my notes online as an exercise in &amp;ldquo;learning in public&amp;rdquo;.&lt;/p&gt;</description>
     </item>
   </channel>
