@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://metamageia.github.io/</loc>
+    <loc>https://metamageia.github.io/blog.gagelara/</loc>
     <lastmod>2025-06-24T15:16:15-05:00</lastmod>
   </url><url>
-    <loc>https://metamageia.github.io/post/</loc>
+    <loc>https://metamageia.github.io/blog.gagelara/post/</loc>
     <lastmod>2025-06-24T15:16:15-05:00</lastmod>
   </url><url>
-    <loc>https://metamageia.github.io/post/01---effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/</loc>
+    <loc>https://metamageia.github.io/blog.gagelara/post/01---effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/</loc>
     <lastmod>2025-06-24T15:16:15-05:00</lastmod>
   </url><url>
-    <loc>https://metamageia.github.io/categories/</loc>
+    <loc>https://metamageia.github.io/blog.gagelara/categories/</loc>
   </url><url>
-    <loc>https://metamageia.github.io/tags/</loc>
+    <loc>https://metamageia.github.io/blog.gagelara/tags/</loc>
   </url>
 </urlset>

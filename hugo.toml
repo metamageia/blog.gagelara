@@ -1,4 +1,5 @@
 baseURL = 'https://metamageia.github.io/blog.gagelara/'
+canonifyURLs = true
 languageCode = 'en-us'
 title = "Gage Lara's Blog"
 theme = 'github-style'
