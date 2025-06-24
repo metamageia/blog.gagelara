@@ -1,4 +1,29 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.gagelara.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Gage Lara's Blog"
 theme = 'github-style'
+
+[params]
+  author = "Gage Lara"
+  description = ""
+  github = "metamageia"
+  linkedin = "gage-lara"
+  email = "metamageia@gmail.com"
+  url = "https://blog.gagelara.com"
+  keywords = "blog, google analytics"
+  rss = true
+  lastmod = true
+  favicon = "/images/github-mark.png"
+  avatar = "/images/avatar.jpg"
+  headerIcon = "/images/github-mark-white.png"
+  location = "El Dorado, Ks"
+  enableGitalk = false
+  enableSearch = true
+
+[outputs]
+  home = ["html", "json"]
+
+[outputFormats.json]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = false

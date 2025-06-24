@@ -10,9 +10,9 @@
     <link rel="stylesheet" href='http://localhost:1313/css/light.css' />
     <link rel="stylesheet" href='http://localhost:1313/css/dark.css' />
     <link rel="stylesheet" href='http://localhost:1313/css/syntax.css' />
-    <title>Test - My New Hugo Site</title>
+    <title>Test - Gage Lara&#39;s Blog</title>
     
-    <link rel="icon" type="image/x-icon" href='http://localhost:1313/images/favicon.ico'>
+    <link rel="icon" type="image/x-icon" href='/images/github-mark.png'>
     
     <meta name="theme-color" content="#1e2327">
 
@@ -24,13 +24,13 @@
   content="Hello!
 " />
 <meta name="keywords"
-  content='' />
+  content='blog, google analytics' />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="http://localhost:1313/post/test/" />
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Test - My New Hugo Site" />
+<meta name="twitter:title" content="Test - Gage Lara&#39;s Blog" />
 <meta name="twitter:description"
   content="Hello!
 " />
@@ -41,7 +41,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Test - My New Hugo Site">
+<meta property="og:title" content="Test - Gage Lara&#39;s Blog">
 <meta property="og:description"
   content="Hello!
 " />
@@ -72,7 +72,7 @@
   <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
     <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
       <a class="Header-link" href="http://localhost:1313/">
-        <img class="octicon" height="32" width="32" src="">
+        <img class="octicon" height="32" width="32" src="/images/github-mark-white.png">
       </a>
     </div>
     <div class="Header-item d-md-none">
@@ -90,14 +90,13 @@
         class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
         <div class="position-relative">
           
-          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
             autocomplete="off">
             <label
               class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
               <input type="text"
                 class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
                 name="q" value="" placeholder="Search" autocomplete="off">
-              <input type="hidden" name="q" value="site:http://localhost:1313/">
             </label>
           </form>
           
@@ -107,7 +106,7 @@
 
     <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
       <a class="Header-link " href="http://localhost:1313/">
-        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/github-mark-white.png">
       </a>
     </div>
     <div class="Header-item" style="margin-right: 0;">
@@ -138,13 +137,13 @@
               <div class="d-none d-md-block">
                 <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/">
                   <img class=" avatar-user"
-                    src="http://localhost:1313/images/avatar.jpg"
+                    src="/images/avatar.jpg"
                     width="32" height="32"></a>
               </div>
               <div class="d-flex flex-column">
                 <h1 class="break-word f3 text-normal mb-md-0 mb-1">
                   <span class="author">
-                    <a href="http://localhost:1313/"></a>
+                    <a href="http://localhost:1313/">Gage Lara</a>
                   </span>
                   <span class="path-divider">/</span>
                   <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
@@ -156,6 +155,11 @@
                     class="no-wrap">
                     Tue, 24 Jun 2025 15:16:15 -0500</relative-time>
 
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Tue, 24 Jun 2025 15:16:15 -0500"
+                    class="no-wrap">
+                    Tue, 24 Jun 2025 15:16:15 -0500</relative-time>
                   
                 </div>
               </div>
@@ -244,6 +248,9 @@
 
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='http://localhost:1313/js/search.js'></script>
 
 
 
