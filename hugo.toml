@@ -1,4 +1,4 @@
-baseURL = 'https://metamageia.github.io/blog.gagelara/'
+baseURL = 'blog.gagelara.com/'
 canonifyURLs = true
 languageCode = 'en-us'
 title = "Gage Lara's Blog"
