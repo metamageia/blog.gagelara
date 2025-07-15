@@ -1,45 +1,43 @@
 {{- $url := .Destination -}}
-{{- if strings.Contains $url "youtube.com/watch?v=" -}}
-  {{- $videoID := "" -}}
-  {{- $params := "" -}}
-  {{- if strings.Contains $url "?" -}}
-    {{- $parts := split $url "?" -}}
-    {{- if gt (len $parts) 1 -}}
-      {{- $params = index $parts 1 -}}
-    {{- end -}}
+{{- $alt := .PlainText -}}
+{{- $title := .Title -}}
+
+{{- $isYouTube := or (strings.Contains $url "youtube.com/watch") (strings.Contains $url "youtu.be/") (strings.Contains $url "youtube.com/embed/") -}}
+
+{{- if $isYouTube -}}
+  {{- $videoId := "" -}}
+  
+  {{- if strings.Contains $url "youtube.com/watch" -}}
+    {{- $parsedUrl := urls.Parse $url -}}
+    {{- $videoId = $parsedUrl.Query.Get "v" -}}
+  {{- else if strings.Contains $url "youtu.be/" -}}
+    {{- $parsedUrl := urls.Parse $url -}}
+    {{- $videoId = strings.TrimPrefix $parsedUrl.Path "/" -}}
+    {{- $videoId = strings.Split $videoId "?" | first -}}
+  {{- else if strings.Contains $url "youtube.com/embed/" -}}
+    {{- $parsedUrl := urls.Parse $url -}}
+    {{- $videoId = strings.TrimPrefix $parsedUrl.Path "/embed/" -}}
+    {{- $videoId = strings.Split $videoId "?" | first -}}
   {{- end -}}
-  {{- range split $params "&" -}}
-    {{- if hasPrefix . "v=" -}}
-      {{- $videoID = strings.TrimPrefix . "v=" -}}
-    {{- end -}}
-  {{- end -}}
-  {{- if $videoID -}}
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe src="https://www.youtube.com/embed/{{ $videoID }}" 
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-              frameborder="0" 
-              allowfullscreen>
-      </iframe>
-    </div>
+  
+  {{- if $videoId -}}
+    <div style="text-align: center; margin: 1rem 0;">
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/{{ $videoId }}" 
+    title="{{ if $title }}{{ $title }}{{ else if $alt }}{{ $alt }}{{ else }}YouTube video player{{ end }}" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+</div>
   {{- else -}}
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
-  {{- end -}}
-{{- else if strings.Contains $url "youtu.be/" -}}
-  {{- $videoID := strings.TrimPrefix (path.Base $url) "/" -}}
-  {{- if strings.Contains $videoID "?" -}}
-    {{- $videoID = index (split $videoID "?") 0 -}}
-  {{- end -}}
-  {{- if $videoID -}}
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe src="https://www.youtube.com/embed/{{ $videoID }}" 
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-              frameborder="0" 
-              allowfullscreen>
-      </iframe>
-    </div>
-  {{- else -}}
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+    {{/* Fallback to regular image if video ID extraction fails */}}
+    <img src="{{ $url }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} />
   {{- end -}}
 {{- else -}}
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+  {{/* Regular image processing */}}
+  <img src="{{ $url }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} />
 {{- end -}}
