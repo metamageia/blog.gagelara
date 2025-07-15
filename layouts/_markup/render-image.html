@@ -1,0 +1,23 @@
+{{- $url := .Destination -}}
+{{- if strings.Contains $url "youtube.com/watch?v=" -}}
+  {{- $videoID := "" -}}
+  {{- range split $url "?" -}}
+    {{- if hasPrefix . "v=" -}}
+      {{- $videoID = strings.TrimPrefix . "v=" -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $videoID -}}
+    {{< youtube {{ $videoID }} >}}
+  {{- else -}}
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+  {{- end -}}
+{{- else if strings.Contains $url "youtu.be/" -}}
+  {{- $videoID := strings.TrimPrefix (path.Base $url) "/" -}}
+  {{- if $videoID -}}
+    {{< youtube {{ $videoID }} >}}
+  {{- else -}}
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+  {{- end -}}
+{{- else -}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+{{- end -}}
